@@ -1,4 +1,4 @@
-package hw1;
+package module1.hw1;
 
 /**
  * Created by Dobryve4ir on 28.01.2017.
