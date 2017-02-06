@@ -1,4 +1,4 @@
-package module2;
+package module2.hw1;
 
 import java.util.Arrays;
 
