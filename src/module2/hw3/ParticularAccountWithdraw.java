@@ -63,7 +63,7 @@ public class ParticularAccountWithdraw {
 
         double particularBalance = 0.0;
         for (int i = 0; i < allNames.length; i++) {
-            if (allNames[i] == inputName) {
+            if (allNames[i].equals(inputName)) {
                 particularBalance = allBalances[i];
                 break;
             }

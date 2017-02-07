@@ -43,12 +43,11 @@ public class ParticularAccountFunding {
 
         double particularBalance = 0.0;
         for (int i = 0; i < allNames.length; i++) {
-            if (allNames[i] == inputName) {
+            if (allNames[i].equals(inputName)) {
                 particularBalance = allBalances[i];
                 break;
             }
         }
-        double fundedBalance = inputFunding + particularBalance;
-        return fundedBalance;
+        return inputFunding + particularBalance;
     }
 }
