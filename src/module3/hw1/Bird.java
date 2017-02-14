@@ -11,15 +11,7 @@ package module3.hw1;
 
 public class Bird {
 
-    public static void main(String[] args) {
-        String[] songPart1 = {"I am flying", "I am singing"};
-        String songPart2 = "I am Bird";
-        sing("I am walking");
-        sing(songPart1);
-        sing(songPart2);
-    }
-
-    private static void sing(String ... song) {
+    public void sing(String... song) {
         if (song ==  null) {
             System.out.println("Incorrect data!");
         } else {
