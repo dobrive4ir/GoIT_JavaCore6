@@ -12,8 +12,11 @@ public class Main {
 
     public static void main(String[] args) {
         Bird bird = new Bird();
-        String birdSong = "I am walking" +"\nI am flying" + "\nI am singing" + "\nI am Bird";
-        bird.sing(birdSong);
+        String[] songPart1 = {"I am walking", "I am flying"};
+        String songPart2 = "I am singing";
+        bird.sing(songPart1);
+        bird.sing(songPart2);
+        bird.sing("I am Bird");
     }
 
 }
