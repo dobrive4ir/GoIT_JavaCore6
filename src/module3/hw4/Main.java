@@ -23,4 +23,5 @@ public class Main {
         user1.monthIncreaser(5);
         System.out.println("Now your employment in company is " + user1.getMonthsOfEmployment());
     }
+
 }
