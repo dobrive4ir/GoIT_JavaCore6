@@ -21,13 +21,13 @@ package module3.hw4;
 public class User {
 
     private String name;
-    private int balance;
+    private double balance;
     private int monthsOfEmployment;
     private String companyName;
     private int salary;
     private String currency;
 
-    public User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency) {
+    public User(String name, double balance, int monthsOfEmployment, String companyName, int salary, String currency) {
         this.name = name;
         this.balance = balance;
         this.monthsOfEmployment = monthsOfEmployment;
@@ -41,11 +41,11 @@ public class User {
     }
 
     public void withdraw(int summ){
-        double comission = 0.1;
+        double commission = 0.1;
         if (summ < 1000){
-            comission = 0.05;
+            commission = 0.05;
         }
-        this.balance -= (int) (summ + (summ * comission));
+        this.balance -= summ + (summ * commission);
     }
 
     public int companyNameLenght (){
@@ -64,11 +64,11 @@ public class User {
         this.name = name;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
