@@ -1,6 +1,7 @@
 package javacore.module4;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * Created by Dobryvechir on 23.02.2017.
@@ -24,28 +25,28 @@ public class Main {
             if (i == 0 || i == 1) {
                 banksArray[i] = new USBank((long) (Math.random() * 1000000 + 500000), "USA", currencySwitcher,
                         (int) (Math.random() * 300 + 150), BigDecimal.valueOf(Math.random() * 3000 + 2000)
-                        .setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue(), (long) (Math.random() * 70 + 40),
+                        .setScale(2, RoundingMode.HALF_UP).doubleValue(), (long) (Math.random() * 70 + 40),
                         (long) (Math.random() * 1000000000 + 500000000));
                 usersArray[i] = new User((long) (Math.random() * 100000 + 50000), usersNameArray[i],
-                        BigDecimal.valueOf(banksArray[i].getAvrSalaryOfEmployee() * 36).setScale(2, BigDecimal.ROUND_HALF_UP)
+                        BigDecimal.valueOf(banksArray[i].getAvrSalaryOfEmployee() * 36).setScale(2, RoundingMode.HALF_UP)
                         .doubleValue(), (int) (Math.random() * 36 + 12), companiesNameArray[i],
                         (int) banksArray[i].getAvrSalaryOfEmployee(), banksArray[i]);
             } else if (i == 2 || i == 3) {
                 banksArray[i] = new EUBank((long) (Math.random() * 2000000 + 1000000), "Germany", currencySwitcher,
                         (int) (Math.random() * 300 + 150), BigDecimal.valueOf(Math.random() * 5000 + 3000)
-                        .setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue(), (long) (Math.random() * 80 + 50),
+                        .setScale(2, RoundingMode.HALF_UP).doubleValue(), (long) (Math.random() * 80 + 50),
                         (long) (Math.random() * 2000000000 + 1000000000));
                 usersArray[i] = new User((long) (Math.random() * 200000 + 100000), usersNameArray[i],
-                        BigDecimal.valueOf(banksArray[i].getAvrSalaryOfEmployee() * 36).setScale(2, BigDecimal.ROUND_HALF_UP)
+                        BigDecimal.valueOf(banksArray[i].getAvrSalaryOfEmployee() * 36).setScale(2, RoundingMode.HALF_UP)
                         .doubleValue(), (int) (Math.random() * 36 + 12), companiesNameArray[i],
                         (int) banksArray[i].getAvrSalaryOfEmployee(), banksArray[i]);
             } else if (i == 4 || i == 5) {
                 banksArray[i] = new ChinaBank((long) (Math.random() * 3000000 + 1500000), "China", currencySwitcher,
                         (int) (Math.random() * 300 + 150), BigDecimal.valueOf(Math.random() * 3000 + 1000)
-                        .setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue(), (long) (Math.random() * 50 + 30),
+                        .setScale(2, RoundingMode.HALF_UP).doubleValue(), (long) (Math.random() * 50 + 30),
                         (long) (Math.random() * 100000000 + 50000000));
                 usersArray[i] = new User((long) (Math.random() * 300000 + 150000), usersNameArray[i],
-                        BigDecimal.valueOf(banksArray[i].getAvrSalaryOfEmployee() * 36).setScale(2, BigDecimal.ROUND_HALF_UP)
+                        BigDecimal.valueOf(banksArray[i].getAvrSalaryOfEmployee() * 36).setScale(2, RoundingMode.HALF_UP)
                         .doubleValue(), (int) (Math.random() * 36 + 12), companiesNameArray[i],
                         (int) banksArray[i].getAvrSalaryOfEmployee(), banksArray[i]);
             }
