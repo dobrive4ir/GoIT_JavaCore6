@@ -93,6 +93,10 @@ public class User {
         this.bank = bank;
     }
 
+    public void printBalance () {
+        System.out.println("Now " + getName() + " balance is: " + getBalance() + getBank().getCurrency());
+    }
+
     @Override
     public String toString() {
         return name + " personal data {" + "id: " + id + ";  balance: " + balance + getBank().getCurrency() +

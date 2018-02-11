@@ -40,7 +40,7 @@ public class Main {
                         BigDecimal.valueOf(banksArray[i].getAvrSalaryOfEmployee() * 36).setScale(2, RoundingMode.HALF_UP)
                         .doubleValue(), (int) (Math.random() * 36 + 12), companiesNameArray[i],
                         (int) banksArray[i].getAvrSalaryOfEmployee(), banksArray[i]);
-            } else if (i == 4 || i == 5) {
+            } else {
                 banksArray[i] = new ChinaBank((long) (Math.random() * 3000000 + 1500000), "China", currencySwitcher,
                         (int) (Math.random() * 300 + 150), BigDecimal.valueOf(Math.random() * 3000 + 1000)
                         .setScale(2, RoundingMode.HALF_UP).doubleValue(), (long) (Math.random() * 50 + 30),
@@ -55,24 +55,21 @@ public class Main {
      Bank system test
      */
         BankSystemImpl bankSystemTest = new BankSystemImpl();
-        for (int i = 0; i < usersArray.length; i++) {
-            String userName = usersArray[i].getName();
-            double userBalance = usersArray[i].getBalance();
-            Currency userCurrency = usersArray[i].getBank().getCurrency();
-            System.out.println(usersArray[i]);
-            System.out.println("\n WITHDRAWAL");
-            bankSystemTest.withdrawOfUser(usersArray[i], (int) (Math.random() * 2301));
-            System.out.println("Now " + userName + " balance is: " + userBalance + userCurrency);
-            System.out.println("\n FUNDING");
-            bankSystemTest.fundUser(usersArray[i], (int) (Math.random() * 20002));
-            System.out.println("Now " + userName + " balance is: " + userBalance + userCurrency);
-            System.out.println("\n TRANSFER");
-            bankSystemTest.transferMoney(usersArray[i], usersArray[(int) (Math.random() * 6)],
+        for (User anUsersArray : usersArray) {
+            System.out.println(anUsersArray);
+            System.out.println("\nWITHDRAWAL");
+            bankSystemTest.withdrawOfUser(anUsersArray, (int) (Math.random() * 2301));
+            anUsersArray.printBalance();
+            System.out.println("\nFUNDING");
+            bankSystemTest.fundUser(anUsersArray, (int) (Math.random() * 20002));
+            anUsersArray.printBalance();
+            System.out.println("\nTRANSFER");
+            bankSystemTest.transferMoney(anUsersArray, usersArray[(int) (Math.random() * 6)],
                     (int) (Math.random() * 40000 + 30000));
-            System.out.println("Now " + userName + " balance is: " + userBalance + userCurrency);
-            System.out.println("\n PAY SALARY");
-            bankSystemTest.paySalary(usersArray[i]);
-            System.out.println("Now " + userName + " balance is: " + userBalance + userCurrency);
+            anUsersArray.printBalance();
+            System.out.println("\nPAY SALARY");
+            bankSystemTest.paySalary(anUsersArray);
+            anUsersArray.printBalance();
             System.out.println("\n=================================================================================\n");
         }
     }
