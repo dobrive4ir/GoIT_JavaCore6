@@ -2,6 +2,10 @@ package javacore.module7.task1;
 
 import javacore.module4.Currency;
 
+/**
+ * Class represents order's entity
+ */
+
 public class Order implements Comparable<Order> {
     private final long id;
     private final int price;

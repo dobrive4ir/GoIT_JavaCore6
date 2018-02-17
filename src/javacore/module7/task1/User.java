@@ -1,5 +1,9 @@
 package javacore.module7.task1;
 
+/**
+ * Class represents user's entity
+ */
+
 public class User {
     private final long id;
     private final String firstName;

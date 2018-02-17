@@ -7,6 +7,10 @@ import javacore.module7.task1.User;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class contains main(){} method, which tests all the operations with Orders list in accordance to the task 2.
+ */
+
 public class Main {
 
     public static void main(String[] args) {

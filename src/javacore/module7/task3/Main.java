@@ -6,6 +6,10 @@ import javacore.module7.task1.User;
 
 import java.util.TreeSet;
 
+/**
+ * Class contains main(){} method, which tests all the operations with Orders set in accordance to the task 3.
+ */
+
 public class Main {
 
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Class contains various methods for sorting Orders (
+ * Class contains various methods for sorting Orders lists in accordance to the task 2.
  */
 
 public final class OrderUtils2 {
@@ -14,6 +14,11 @@ public final class OrderUtils2 {
     private OrderUtils2() {
     }
 
+    /**
+     * Sorts orders list by price decrease.
+     *
+     * @param orderList orders list, which will be sorted
+     */
     public static void inversePriceSort(List<Order> orderList) {
         orderList.sort(new Comparator<Order>() {
             @Override
@@ -23,6 +28,11 @@ public final class OrderUtils2 {
         });
     }
 
+    /**
+     * Sorts orders list by price and users city.
+     *
+     * @param orderList orders list, which will be sorted
+     */
     public static void priceCitySort(List<Order> orderList) {
         orderList.sort(new Comparator<Order>() {
             @Override
@@ -36,6 +46,11 @@ public final class OrderUtils2 {
         });
     }
 
+    /**
+     * Sorts orders list by item name, shop identifier and users city.
+     *
+     * @param orderList orders list, which will be sorted
+     */
     public static void itemNameShopIdentificatorCitySort(List<Order> orderList) {
         orderList.sort(new Comparator<Order>() {
             @Override
