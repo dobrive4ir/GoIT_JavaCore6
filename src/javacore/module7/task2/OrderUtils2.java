@@ -5,6 +5,10 @@ import javacore.module7.task1.Order;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Class contains various methods for sorting Orders (
+ */
+
 public final class OrderUtils2 {
 
     private OrderUtils2() {
@@ -23,11 +27,11 @@ public final class OrderUtils2 {
         orderList.sort(new Comparator<Order>() {
             @Override
             public int compare(Order o1, Order o2) {
-                int result = ((Integer)o1.getPrice()).compareTo(o2.getPrice());
+                int result = o1.getUser().getCity().compareToIgnoreCase(o2.getUser().getCity());
                 if (result != 0) {
                     return result;
                 }
-                return o1.getUser().getCity().compareToIgnoreCase(o2.getUser().getCity());
+                return ((Integer)o1.getPrice()).compareTo(o2.getPrice());
             }
         });
     }

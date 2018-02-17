@@ -1,0 +1,36 @@
+1. Create classes User and Order.
+    1.1) Class User should contains fields:
+        long id;
+        String firstName;
+        String lastName;
+        String City;
+        int balance;
+    1.2)Class Order should contains fields:
+        long id;
+        int price;
+        Currency currency (use class Currency from module 4);
+        String itemName;
+        String shopIdentificator;
+        User user;
+2. Create Main class where you need to create 10 orders with 10 users and put it to the List and then:
+    2.1) sort list by Order price in decrease order;
+    2.2) sort list by Order price in increase order and User city;
+    2.3) sort list by Order itemName AND shopIdentificator AND User city;
+    Additional tasks:
+    2.5) delete duplicates from the list;
+    2.6) delete items where the price less then 1500;
+    2.7) separate list for 2 lists - orders in USD and EUR;
+    2.8) separate list for as many lists as many different cities it has;
+3. Create Main class where you need to create 10 orders with 10 users and put it to the TreeSet. You should create 8
+    unique and two duplicate orders and then:
+    3.1) check if set contains order with user's lastName "Petrov";
+    3.2) print order with largest price using only one TreeSet method;
+    3.3) delete orders where currency is USD using Iterator;
+4. Generate Integer and String ArrayList and LinkedList with 1000 and 10000 elements. Measure time of execution of the
+    following methods and print it to console:
+    4.1) add;
+    4.2) set;
+    4.3) get;
+    4.4) remove.
+
+
