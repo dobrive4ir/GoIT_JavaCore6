@@ -3,6 +3,14 @@ package javacore.module7.task4;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+/**
+ * Class contains measuring of time execution for the next operations with ArrayList<> and LinkedList<>:
+ * add;
+ * set;
+ * get;
+ * remove.
+ */
+
 public final class CollectionsSpeedTest {
 
     private static ArrayList<String> smallStrArr = new ArrayList<>(1000);
