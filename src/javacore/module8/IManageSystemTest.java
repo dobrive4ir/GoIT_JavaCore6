@@ -1,5 +1,9 @@
 package javacore.module8;
 
+/**
+ * Class checks methods of the Manage System in accordance to the task 5.
+ */
+
 public class IManageSystemTest {
 
     public static void main(String[] args) {

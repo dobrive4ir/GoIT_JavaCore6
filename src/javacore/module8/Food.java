@@ -1,5 +1,9 @@
 package javacore.module8;
 
+/**
+ * Class represents food entity
+ */
+
 public class Food {
 
     private final long id;
