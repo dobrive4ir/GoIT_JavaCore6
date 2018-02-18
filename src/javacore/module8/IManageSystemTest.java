@@ -9,7 +9,8 @@ public class IManageSystemTest {
         Food beer3 = new Food("Taler", Country.BELARUS, 70);
         Food beer4 = new Food("Becks", Country.GERMANY, 75);
         Food beer5 = new Food("Cronenbourg", Country.FRANCE, 80);
-        Food beer1Changed = new Food(beer1.getId(),beer1.getName() + " light", Country.UKRAINE, 85);
+        Food beer1Changed = new Food(beer1.getId(),beer1.getName() + " light", beer1.getCountry(),
+                beer1.getExpiration()-5);
 
         IManageSystemImpl manageSystem = new IManageSystemImpl();
         manageSystem.save(beer1, 16.0);
