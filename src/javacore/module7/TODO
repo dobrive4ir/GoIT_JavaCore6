@@ -15,12 +15,12 @@
 2. Create Main class where you need to create 10 orders with 10 users and put it to the List and then:
     2.1) sort list by Order price in decrease order;
     2.2) sort list by Order price in increase order and User city;
-    2.3) sort list by Order itemName AND shopIdentificator AND User city;
+    2.3) sort list by Order itemName and shopIdentificator and User city;
     Additional tasks:
-    2.5) delete duplicates from the list;
-    2.6) delete items where the price less then 1500;
-    2.7) separate list for 2 lists - orders in USD and EUR;
-    2.8) separate list for as many lists as many different cities it has;
+    2.4) delete duplicates from the list;
+    2.5) delete items where the price less then 1500;
+    2.6) separate list for 2 lists - orders in USD and EUR;
+    2.7) separate list for as many lists as many different cities it has;
 3. Create Main class where you need to create 10 orders with 10 users and put it to the TreeSet. You should create 8
     unique and two duplicate orders and then:
     3.1) check if set contains order with user's lastName "Petrov";
