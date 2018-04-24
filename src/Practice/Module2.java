@@ -1,10 +1,6 @@
 package Practice;
 
-/**
- * Created by Dobryvechir on 31.01.2017.
- */
-
-public class module2 {
+public class Module2 {
 
     public static void main(String[] args) {
 
