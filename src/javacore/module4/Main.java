@@ -55,21 +55,21 @@ public class Main {
      Bank system test
      */
         BankSystemImpl bankSystemTest = new BankSystemImpl();
-        for (User anUsersArray : usersArray) {
-            System.out.println(anUsersArray);
+        for (User currentUser : usersArray) {
+            System.out.println(currentUser);
             System.out.println("\nWITHDRAWAL");
-            bankSystemTest.withdrawOfUser(anUsersArray, (int) (Math.random() * 2301));
-            anUsersArray.printBalance();
+            bankSystemTest.withdrawOfUser(currentUser, (int) (Math.random() * 2301));
+            currentUser.printBalance();
             System.out.println("\nFUNDING");
-            bankSystemTest.fundUser(anUsersArray, (int) (Math.random() * 20002));
-            anUsersArray.printBalance();
+            bankSystemTest.fundUser(currentUser, (int) (Math.random() * 20002));
+            currentUser.printBalance();
             System.out.println("\nTRANSFER");
-            bankSystemTest.transferMoney(anUsersArray, usersArray[(int) (Math.random() * 6)],
+            bankSystemTest.transferMoney(currentUser, usersArray[(int) (Math.random() * 6)],
                     (int) (Math.random() * 40000 + 30000));
-            anUsersArray.printBalance();
+            currentUser.printBalance();
             System.out.println("\nPAY SALARY");
-            bankSystemTest.paySalary(anUsersArray);
-            anUsersArray.printBalance();
+            bankSystemTest.paySalary(currentUser);
+            currentUser.printBalance();
             System.out.println("\n=================================================================================\n");
         }
     }
